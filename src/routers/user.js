@@ -200,7 +200,7 @@ router.get('/users/:id/avatar', async (req, res) => { // THIS WILL RENDER THE PR
         }
 
         res.set('Content-Type', 'image/png') // HEADER SET
-        res.send(user.avatar)
+        res.send(user.avatar) // RENDERS THE AVATAR ON THE WEB, PREVIOUSLY SET FROM BINARY DATA TO PNG IMAGE FILE
     } catch(e) {
         res.status(404).send()
     }
